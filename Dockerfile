@@ -32,7 +32,7 @@ ENV PATH=${PATH}:${ANDROID_HOME}/platform-tools
 ENV PATH=${PATH}:${ANDROID_HOME}/tools
 ENV PATH=${PATH}:${ANDROID_HOME}/tools/bin
 
-RUN apk add --no-cache ca-certificates wget \
+RUN apk add --no-cache ca-certificates wget git bash \
  && update-ca-certificates \
  && wget -q -O android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS}.zip \
  && mkdir ${ANDROID_HOME} \
